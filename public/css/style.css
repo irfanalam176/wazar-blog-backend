@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  padding: 2em;
+  background: linear-gradient(90deg, #f06e20, 70%, #ef9b20);
+}
+a {
+  text-decoration: none;
+}
+.bodyWrapper {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+}
+aside {
+  width: 300px;
+  background-color: #211c19;
+  min-height: calc(100vh - 2em);
+  padding: 2em 1em;
+  position: relative;
+}
+.content {
+  width: calc(100% - 300px);
+  background-color: #f8f9f9;
+  padding: 1em;
+}
+.logo {
+  font-size: 2em;
+  text-align: center;
+  display: block;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 2em;
+}
+.sideLinks a {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-weight: 500;
+  padding: 1em;
+  margin-bottom: 1em;
+  color: white !important;
+  transition: all ease-in-out 200ms;
+}
+.sideLinks a.active,.sideLinks a:hover {
+    background:#f06e20;
+}
+.logOut{
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+.logOut:hover{
+    color: #ef9b20;
+}
+form{
+    background-color: white;
+    border-radius: 20px;
+    padding: 1em;
+}
+.mainHeading{
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+.mainHeading.whiteHeading{
+  color: white;
+}
+.dt-length {
+  display: flex;
+  align-items: center;
+}
+.dt-length select{
+  width: 200px;
+}
+.dt-length label{
+  margin-left: 1em;
+  font-weight: 500;
+}
+.dt-search{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.dt-search label{
+  margin-right: 1em;
+  font-weight: 500;
+}
+.dt-search input{
+  width: 400px;
+  margin-left: auto;
+}
+.blogDescription{
+  width: 400px;
+}
+.blogDescription p{
+  font-size: 0.9em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 4.5em; 
+}
+.note-editable{
+  min-height: 500px;
+}
+.error{
+  color: rgba(255, 0, 0, 0.555);
+  font-size: 0.8em;
+  font-weight: 500;
+}

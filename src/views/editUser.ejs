@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./components/head.ejs') %>
+  <body>
+  
+   <div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+
+          <h1 class="mainHeading whiteHeading">Edit User</h1>
+            <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" >
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" >
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" >
+                </div>
+                <div class="mb-3">
+                  <label for="role" class="form-label">Role</label>
+                 <select name="" id="role" class="form-control">
+                  <option disabled selected>Select a Role</option>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
+                  <option value="auther">Auther</option>
+                 </select>
+                </div>
+                <div class="mb-3">
+                  <label for="image" class="form-label">Profile Image</label>
+                  <input type="file" class="form-control" id="image" >
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="/users" class="btn btn-danger ms-3">Cancel</a>
+              </form>
+        </div>
+    </div>
+   </div>
+   <%- include('./components/scripts.ejs') %>
+  </body>
+</html>

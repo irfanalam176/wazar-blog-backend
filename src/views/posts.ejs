@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+  <%- include("./components/head.ejs") %>
+
+  <body>
+    <!-- modal -->
+    <div class="modal fade" id="blogDelete" tabindex="-1" aria-labelledby="blogDelete" aria-hidden="true">
+      <div class="modal-dialog ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="blogDelete">Delete Blog</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are You Sure Want To Delete blog "--------"
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+
+    <div class="bodyWrapper">
+     <%- include('./components/sideBar.ejs') %>
+      <section class="content">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+
+          </div>
+          <a href="posts/addBlog" class="btn btn-success">Add Blog</a>
+        </div>
+        <table id="myTable" class="display table table-dark table-striped">
+          <thead>
+              <tr>
+                  <th>#SNO</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th class="blogDescription">description</th>
+                  <th>Action</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>01</td>
+                  <td>AI and Humans</td>
+                  <td>Irfan Alam</td>
+                  <td class="blogDescription">
+                    <p >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quod porro cupiditate dolores voluptatum eveniet dolore nihil saepe qui blanditiis, nemo perspiciatis recusandae! Quibusdam velit nulla ut ea voluptate officia eius sint mollitia, doloremque consequuntur quidem magni quaerat non.
+                    </p>
+                  </td>
+                  <td>
+                    <a href="posts/editBlog" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#blogDelete"><i class="fa-solid fa-trash"></i></a>
+                  </td>
+              </tr>
+             
+          </tbody>
+      </table>
+      </section>
+    </div>
+    <%- include('./components/scripts.ejs') %>
+  </body>
+</html>

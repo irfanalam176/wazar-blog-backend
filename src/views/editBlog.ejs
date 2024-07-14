@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./components/blogHead.ejs') %>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto">
+          <h1 class="mainHeading whiteHeading">Edit Blog</h1>
+          <form>
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" />
+            </div>
+
+            <textarea id="summernote" name="blog"></textarea>
+
+            <div class="mb-3">
+              <label for="image" class="form-label">Blog Image</label>
+              <input type="file" class="form-control" id="image" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="/posts" class="btn btn-danger ms-3">Cancel</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <%- include('./components/blogScripts.ejs') %>
+  </body>
+</html>

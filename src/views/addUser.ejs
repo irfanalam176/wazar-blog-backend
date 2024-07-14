@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./components/head.ejs") %>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <h1 class="mainHeading whiteHeading">Add User</h1>
+          <form action="/users/addUser" method="POST">
+            <div class="mb-3">
+              <label for="userName" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="userName"
+                id="userName"
+              />
+              <% if (typeof errors !== 'undefined') { %>
+                <% errors.forEach(i => { %>
+                  <% if (i.path[0]=='userName') { %>
+                  <p class="error">
+                   <%= i.message %>  
+                  </p>
+                  <% } %>
+                <% }) %>
+              <% } %>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                name="userEmail"
+                id="email"
+              />
+              <% if (typeof errors !== 'undefined') { %>
+                <% errors.forEach(i => { %>
+                  <% if (i.path[0]=='userEmail') { %>
+                  <p class="error">
+                   <%= i.message %>  
+                  </p>
+                  <% } %>
+                <% }) %>
+              <% } %>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                name="userPassword"
+                id="password"
+              />
+              <% if (typeof errors !== 'undefined') { %>
+                <% errors.forEach(i => { %>
+                  <% if (i.path[0]=='userPassword') { %>
+                  <p class="error">
+                   <%= i.message %>  
+                  </p>
+                  <% } %>
+                <% }) %>
+              <% } %>
+            </div>
+            <div class="mb-3">
+              <label for="role" class="form-label">Role</label>
+              <select name="userRole" id="role" class="form-control">
+                <option disabled selected>Select a Role</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+                <option value="auther">Auther</option>
+              </select>
+              <% if (typeof errors !== 'undefined') { %>
+                <% errors.forEach(i => { %>
+                  <% if (i.path[0]=='userRole') { %>
+                  <p class="error">
+                   <%= i.message %>  
+                  </p>
+                  <% } %>
+                <% }) %>
+              <% } %>
+            </div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Profile Image</label>
+              <input
+                type="file"
+                name="userImage"
+                class="form-control"
+                id="image"
+              />
+              <% if (typeof errors !== 'undefined') { %>
+                <% errors.forEach(i => { %>
+                  <% if (i.path[0]=='userImage') { %>
+                  <p class="error">
+                   <%= i.message %>  
+                  </p>
+                  <% } %>
+                <% }) %>
+              <% } %>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="/users" class="btn btn-danger ms-3">Cancel</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <%- include('./components/scripts.ejs') %>
+  </body>
+</html>
