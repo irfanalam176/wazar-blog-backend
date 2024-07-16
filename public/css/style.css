@@ -124,3 +124,9 @@ form{
   font-size: 0.8em;
   font-weight: 500;
 }
+td img{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  aspect-ratio: 1/1;
+}

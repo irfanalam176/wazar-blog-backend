@@ -13,9 +13,6 @@ const userSchema = z.object({
     .regex(/[0-9]/, { message: "Password must contain at least one number" })
     .regex(/[^a-zA-Z0-9]/, { message: "Password must contain at least one special character" }),
   userRole: z.enum(['admin', 'user', 'auther'], { message: "Role must be one of: admin, user, auther" }),
-  userImage: z.string()
-    .min(1, { message: "Image path is required" })
-    .max(255, { message: "Image path must be 255 characters or less" })  // Adjust the max length if necessary
 });
 
 

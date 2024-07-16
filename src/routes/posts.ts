@@ -1,13 +1,9 @@
 import { Router,Request,Response } from "express";
-import { renderPosts } from "../controller";
+import { addBlogPage, editBlogPage, renderPosts } from "../controller";
 const posts = Router()
 posts.get("/",renderPosts)
 
-posts.get("/addBlog",(req:Request,res:Response)=>{
-    res.render("addBlog",{title:"Add Blog"})
-})
-posts.get("/editBlog",(req:Request,res:Response)=>{
-    res.render("editBlog",{title:"Edit Blog"})
-})
+posts.get("/add-blog",addBlogPage)
+posts.get("/edit-blog",editBlogPage)
 
 export default posts

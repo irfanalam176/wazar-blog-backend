@@ -1,5 +1,5 @@
-import { renderUser,addUserPage,editUserPage,addUser } from "./users";
-import { renderPosts } from "./posts";
+import { renderUser,addUserPage,editUserPage,addUser,deleteUser } from "./users";
+import { renderPosts,addBlogPage,editBlogPage } from "./posts";
 export {
-    renderUser,renderPosts,addUserPage,editUserPage,addUser
+    renderUser,renderPosts,addUserPage,editUserPage,addUser,addBlogPage,editBlogPage,deleteUser
 }
